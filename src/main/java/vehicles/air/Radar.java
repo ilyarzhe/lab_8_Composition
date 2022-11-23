@@ -2,6 +2,15 @@ package vehicles.air;
 
 public class Radar implements IAirVehicle{
     private int serialNumber;
+
+    public int getSerialNumber() {
+        return serialNumber;
+    }
+
+    public void setSerialNumber(int serialNumber) {
+        this.serialNumber = serialNumber;
+    }
+
     private int passengerCount;
 
     public Radar(int serialNumber,int passengerCount){
@@ -19,3 +28,4 @@ public class Radar implements IAirVehicle{
         this.passengerCount = amount;
     }
 }
+

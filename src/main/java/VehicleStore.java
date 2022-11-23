@@ -1,5 +1,6 @@
 import products.Product;
 import vehicles.*;
+import vehicles.air.Radar;
 import vehicles.land.Bicycle;
 import vehicles.land.Car;
 
@@ -27,8 +28,13 @@ public class VehicleStore {
         car1.startEngine();
         System.out.println(car1.getFuelLevel());
         System.out.println(car1.getPrice());
+        System.out.println("____________");
 
         // lab tests (water vehicle related)...
+        Helicopter helicopter = new Helicopter(20,100,new Product("SuperHeli",100,20),new Radar(1234234,50));
+        System.out.println(helicopter.getSerialNumber());
 
+        Speedboat speedboat = new Speedboat(30,150,new Product("Helop",10,2),"Hello",new Motor(10,200));
+        speedboat.getFuelLevel();
     }
 }

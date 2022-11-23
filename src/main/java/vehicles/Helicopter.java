@@ -20,4 +20,16 @@ public class Helicopter extends Vehicle implements IAirVehicle{
     public void setPassengerCount(int amount) {
         radar.setPassengerCount(amount);
     }
+
+    @Override
+    public int getSerialNumber() {
+        return radar.getSerialNumber();
+    }
+
+    @Override
+    public void setSerialNumber(int serialNumber) {
+       radar.setSerialNumber(serialNumber);
+
+    }
 }
+
