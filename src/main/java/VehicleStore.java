@@ -3,12 +3,13 @@ import vehicles.*;
 import vehicles.air.Radar;
 import vehicles.land.Bicycle;
 import vehicles.land.Car;
+import vehicles.land.ILandVehicle;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class VehicleStore {
-    private static List<IVehicle> vehicles;
+    private static List<ILandVehicle> vehicles;
 
     public static void main(String[] args) {
         vehicles = new ArrayList<>();
@@ -31,10 +32,7 @@ public class VehicleStore {
         System.out.println("____________");
 
         // lab tests (water vehicle related)...
-        Helicopter helicopter = new Helicopter(20,100,new Product("SuperHeli",100,20),new Radar(1234234,50));
-        System.out.println(helicopter.getSerialNumber());
-
-        Speedboat speedboat = new Speedboat(30,150,new Product("Helop",10,2),"Hello",new Motor(10,200));
-        speedboat.getFuelLevel();
-    }
+        Kayak kayak = new Kayak(10,20,new Product("Hello",10,2),"Strong");
+        vehicles.get(1).getWheelCount();
+        }
 }
